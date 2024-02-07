@@ -22,5 +22,5 @@ task = CrystalSymmetryClassificationTask(
     output_kwargs={"lazy": False, "input_dim": 1, "hidden_dim": 1},
 )
 
-trainer = pl.Trainer(fast_dev_run=10)
+trainer = pl.Trainer(fast_dev_run=100, accelerator="cpu")
 trainer.fit(task, datamodule=dm)
